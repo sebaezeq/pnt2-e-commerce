@@ -1,15 +1,13 @@
-"use client";
+import Sale from "./Sale";
 
-import Sale from "@/app/sales/Sale";
-
-const SalesList = ({ sales }) => {
+const SalesList = (props) => {
     return (
         <ul>
-            {sales.map((sale) => (
+            {props.sales.map((sale) => (
                 <Sale
                     key={sale._id}
                     _id={sale._id}
-                    saleId={sale.saleId}
+                    saleId={sale._id}
                     productName={sale.productName}
                     customerName={sale.customerName}
                     saleDate={sale.saleDate}

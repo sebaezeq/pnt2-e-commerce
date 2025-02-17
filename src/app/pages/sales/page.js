@@ -1,41 +1,25 @@
-"use client";
+"use client"; 
 
-import SalesList from "./SalesList";
 import { useState, useEffect } from "react";
+import SalesList from "./SalesList";
+import mockSales from "./mockSales"; 
 
 const SalesPage = () => {
     const [sales, setSales] = useState([]);
-    const [page, setPage] = useState(1);
-    const [pageSize] = useState(30);
 
     useEffect(() => {
-        fetch(`COMPLETAR`)
-        .then((response) => response.json())
-        .then((data) => {
-            setSales(data);
-        }).catch((error) => console.log(error));
-    }, [page, pageSize]);
+        setTimeout(() => {
+            console.log(mockSales);
+            setSales(mockSales);
+        }, 500)
+        
+    }, []);
 
     return (
         <div>
-            <div>
-                <SalesList sales={sales} />
-            </div>
-            <div>
-                <button 
-                    onClick={() => setPage((prevPage) => prevPage - 1)} 
-                    disabled={page === 1} 
-                    style={{ color: 'red', fontWeight: 'bold' }}>
-                    Anterior
-                </button>
-                <button 
-                    onClick={() => setPage((prevPage) => prevPage + 1)} 
-                    style={{ color: 'yellow', fontWeight: 'bold' }}>
-                    Siguiente
-                </button>
-            </div>
+            <SalesList sales={sales} />
         </div>
     );
-}
+};
 
 export default SalesPage;

@@ -1,23 +1,21 @@
-"use client";
+import "./product.css";
+import Product from "./Product";
 
-import Product from "@/app/products/Product";
-
-const ProductsList = ({ products }) => {
+const ProductsList = (props) => {
     return (
         <ul>
-            {products.map((product) => (
+            {props.products.map((producto) => (
                 <Product
-                    key={product._id}
-                    _id={product._id}
-                    image={product.image}
-                    name={product.name}
-                    description={product.description}
-                    price={product.price}
-                    category={product.category}
+                    key={producto._id}
+                    _id={producto._id}
+                    image={producto.image}
+                    name={producto.name}
+                    description={producto.description}
+                    price={producto.price}
                 />
             ))}
         </ul>
     );
-}
+};
 
 export default ProductsList;
