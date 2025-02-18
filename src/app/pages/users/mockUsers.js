@@ -1,24 +1,24 @@
 const mockUsers = [
     {
       _id: "1",
-      username: "jdoe",
-      name: "John",
-      lastname: "Doe",
-      email: "jdoe@example.com",
+      username: "jperez",
+      name: "Juan",
+      lastname: "Perez",
+      email: "juanperez@gmail.com",
     },
     {
       _id: "2",
-      username: "mgarcia",
+      username: "mlopez",
       name: "Maria",
-      lastname: "Garcia",
-      email: "mgarcia@example.com",
+      lastname: "Lopez",
+      email: "marialopez@gmail.com",
     },
     {
       _id: "3",
-      username: "rcastro",
-      name: "Ricardo",
-      lastname: "Castro",
-      email: "rcastro@example.com",
+      username: "crodrig",
+      name: "Carlos",
+      lastname: "Rodriguez",
+      email: "carlosrodriguez@gmail.com",
     },
   ];
   
